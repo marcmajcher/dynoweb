@@ -20,90 +20,87 @@
 	<!-- build:js scripts/vendor/modernizr.js -->
 	<script src="/bower_components/modernizr/modernizr.js"></script>
 	<!-- endbuild -->
-	
+
 </head>
 <body>
-	
+
 
 
 	<div class="screen-main">
 		<h1 class="dyno-force"><span class="red">D</span><span class="yellow">Y</span><span class="blue">N</span><span class="green">O</span>-FORCE!</h1>
 		<div class="main-hosting" ng-if="gameData.state === gameState.HOSTING">
-			<h2>Team <span class="mech-name">Majestic Echo</span>!
-				<br>Waiting for pilots...</h2>
+			<h2>Team <span class="mech-name">Majestic Echo</span>!</h2>
+			Waiting for pilots...
+			<table class="player-list table">
+				<tr><td>
+					[Host] <span class="pilot-name">Bazooka</span>
+				</td></tr>
+				<tr><td>
+					[Pilot] <span class="pilot-name">Artemis</span>
+				</td></tr>
+				<tr><td>
+					[Pilot] <span class="pilot-name">Zippy</span>
+				</td></tr>
+				<tr><td>
+					[Pilot] <span class="pilot-name">Candy</span>
+				</td></tr>
+				<tr><td>
+					[Pilot] <span class="pilot-name">Goose</span>
+				</td></tr>
+			</table>
+			<div class="main-host-buttons">
 				<hr>
-				<div>
-					<ul class="player-list">
-						<li>
-							<span class="pilot-name">[Host] Bazooka</span>
-						</li>
-						<li>
-							<span class="pilot-name">[Pilot] Artemis</span>
-						</li>
-						<li>
-							<span class="pilot-name">[Pilot] Zippy</span>
-						</li>
-						<li>
-							<span class="pilot-name">[Pilot] Candy</span>
-						</li>
-						<li>
-							<span class="pilot-name">[Pilot] Goose</span>
-						</li>
-					</ul>
+				<div ng-if="gameData.pilotCount > 1">
+					<a href="fight.html">
+						<button class="btn btn-lg btn-success">FIGHT!</button>
+					</a>
 				</div>
-				<hr>
-				<div class="main-host-buttons">
-					<div ng-if="gameData.pilotCount > 1">
-						<a href="fight.html">
-							<button class="btn btn-lg btn-success">FIGHT!</button>
-						</a>
-					</div>
-					<div>
-						<a href="main.html">
-							<button class="btn btn-lg btn-danger">Scrub Mission</button>
-						</a>
-					</div>
+				<div>
+					<a href="main.html">
+						<button class="btn btn-lg btn-danger">Scrub Mission</button>
+					</a>
 				</div>
 			</div>
 		</div>
+	</div>
 
 
 
-		<!-- build:js(.) scripts/vendor.js -->
-		<!-- bower:js -->
-		<script src="/bower_components/jquery/dist/jquery.js"></script>
-		<!-- endbower -->
-		<!-- endbuild -->
+	<!-- build:js(.) scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
 
-		
-		<!-- build:js(.) scripts/plugins.js -->
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
-		<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
-		<!-- endbuild -->
-		
 
-		<!-- build:js scripts/main.js -->
-		<script src="scripts/main.js"></script>
-		<!-- endbuild -->
+	<!-- build:js(.) scripts/plugins.js -->
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/modal.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/button.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/popover.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carousel.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
+	<script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
+	<!-- endbuild -->
 
-		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-		<script>
-		(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-		e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-		e.src='https://www.google-analytics.com/analytics.js';
-		r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-		ga('create','UA-XXXXX-X');ga('send','pageview');
-		</script>
-	</body>
-	</html>
+
+	<!-- build:js scripts/main.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
+
+	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+	<script>
+	(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+		function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+	e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+	e.src='https://www.google-analytics.com/analytics.js';
+	r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+	ga('create','UA-XXXXX-X');ga('send','pageview');
+	</script>
+</body>
+</html>
